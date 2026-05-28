@@ -12,53 +12,50 @@ function Header() {
       {/* First Div - Navbar */}
       <div className="font-semibold text-white px-4 sm:px-6 md:px-12 lg:px-20 py-5 md:py-7">
 
-        {/* Logo Top */}
-        <div className="flex justify-center lg:justify-start mb-6">
+        {/* Top Row */}
+        <div className="flex items-center justify-between mb-6">
+
+          {/* Logo */}
           <img
             className="h-10 sm:h-11 w-auto"
             src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/static-assets/images/swiggy_logo_white.png"
             alt="Swiggy Logo"
           />
+
+          {/* Sign In */}
+          <a
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-xl bg-black hover:bg-neutral-900 transition py-2 px-4 sm:px-5 text-sm sm:text-base"
+          >
+            Sign in
+          </a>
         </div>
 
-        {/* Bottom Nav */}
-        <div className="flex flex-wrap justify-center lg:justify-between items-center gap-4 text-sm sm:text-base">
+        {/* Bottom Section */}
+        <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-8 text-sm sm:text-base">
 
-          <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-8">
-            
-            <Link
-              to="/corporate"
-              className="hover:text-orange-400 transition"
-            >
-              Swiggy Corporate
-            </Link>
+          <Link
+            to="/corporate"
+            className="hover:text-orange-400 transition"
+          >
+            Swiggy Corporate
+          </Link>
 
-            <Link
-              to="/partner"
-              className="hover:text-orange-400 transition"
-            >
-              Partner with us
-            </Link>
-          </div>
+          <Link
+            to="/partner"
+            className="hover:text-orange-400 transition"
+          >
+            Partner with us
+          </Link>
 
-          <div className="flex items-center gap-3 sm:gap-4">
-            
-            <a
-              target="_blank"
-              rel="noreferrer"
-              className="border border-white hover:bg-white hover:text-black transition rounded-xl py-2 px-4"
-            >
-              Get the App
-            </a>
-
-            <a
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-xl bg-black hover:bg-neutral-900 transition py-2 px-5"
-            >
-              Sign in
-            </a>
-          </div>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            className="border border-white hover:bg-white hover:text-black transition rounded-xl py-2 px-4"
+          >
+            Get the App
+          </a>
         </div>
       </div>
 
