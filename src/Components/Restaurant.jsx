@@ -15,8 +15,8 @@ export default function Restaurant() {
   async function fetchRestaurants(offset = null) {
     setLoading(true);
     const url = offset
-      ? `https://swiggy-frontend-160f2tjsm-harshit-s-projects2.vercel.app/api/restaurants?offset=${encodeURIComponent(offset)}`
-      : "https://swiggy-frontend-160f2tjsm-harshit-s-projects2.vercel.app/api/restaurants";
+      ? `https://swiggy-frontend-eta.vercel.app/api/restaurants?offset=${encodeURIComponent(offset)}`
+      : "https://swiggy-frontend-eta.vercel.app/api/restaurants";
 
     const response = await fetch(url);
     const data = await response.json();
