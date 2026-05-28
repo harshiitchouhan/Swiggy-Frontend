@@ -1,5 +1,5 @@
 import { dineoutRestaurants } from "../Utils/DineOut";
-import { FaStar } from "react-icons/fa";
+import { FaStar,FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { useRef } from "react";
 
 export default function DineItems() {
@@ -15,11 +15,9 @@ export default function DineItems() {
 
       <div className="relative mt-5 mb-20">
         {/* Left Button */}
-        <button
-          onClick={() => scroll("left")}
-          className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 bg-white border border-gray-200 shadow-md rounded-full w-9 h-9 flex items-center justify-center hover:bg-gray-50"
-        >
-          ‹
+        <button onClick={() => scroll("left")}
+          className="absolute -left-4 top-[40%] -translate-y-1/2 z-10 bg-[#0c1a30c2] border border-gray-300 shadow-lg rounded-full w-10 h-10 flex items-center justify-center hover:bg-orange-500 hover:border-orange-500 hover:text-white transition-all duration-200">
+          <FaChevronLeft className="text-white text-sm" />
         </button>
 
         {/* Scroll Container */}
@@ -64,11 +62,9 @@ export default function DineItems() {
         </div>
 
         {/* Right Button */}
-        <button
-          onClick={() => scroll("right")}
-          className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 bg-white border border-gray-200 shadow-md rounded-full w-9 h-9 flex items-center justify-center hover:bg-gray-50"
-        >
-          ›
+        <button onClick={() => scroll("right")}
+          className="absolute -right-4 top-[40%] -translate-y-1/2 z-10 bg-[#0c1a30c2] border border-gray-300 shadow-lg rounded-full w-10 h-10 flex items-center justify-center  hover:bg-orange-500 hover:border-orange-500 hover:text-white transition-all duration-200">
+          <FaChevronRight className="text-white text-sm" />
         </button>
       </div>
     </div>

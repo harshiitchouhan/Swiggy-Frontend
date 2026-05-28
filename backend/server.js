@@ -59,9 +59,21 @@ function extractCategories(data) {
 // Routes 
 
 // Restaurant listing
+// app.get("/api/restaurants", async (req, res) => {
+//   try {
+//     const url = `https://www.swiggy.com/dapi/restaurants/list/v5?lat=${LAT}&lng=${LNG}&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING`;
+//     const data = await fetchSwiggy(url, 3);
+//     res.json(data);
+//   } catch (err) {
+//     console.error("Restaurant API Error:", err.message);
+//     res.status(500).json({ success: false, message: err.message });
+//   }
+// });
+
 app.get("/api/restaurants", async (req, res) => {
   try {
-    const url = `https://www.swiggy.com/dapi/restaurants/list/v5?lat=${LAT}&lng=${LNG}&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING`;
+    const offset = req.query.offset || "";
+    const url = `https://www.swiggy.com/dapi/restaurants/list/v5?lat=${LAT}&lng=${LNG}&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING${offset ? `&nextOffset=${offset}&widgetOffset[]=` : ""}`;
     const data = await fetchSwiggy(url, 3);
     res.json(data);
   } catch (err) {

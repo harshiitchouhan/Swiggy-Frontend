@@ -27,7 +27,7 @@ export default function SearchFood() {
         setLoading(true);
 
         const response = await fetch(
-          `https://swiggy-swart-zeta.vercel.app/api/menu/${id}/search?q=${debouncedSearch}`
+          `https://swiggy-frontend-160f2tjsm-harshit-s-projects2.vercel.app/api/menu/${id}/search?q=${debouncedSearch}`
         );
 
         const data = await response.json();

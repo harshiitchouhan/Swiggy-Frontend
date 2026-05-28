@@ -12,7 +12,7 @@ export default function RestHeader() {
 
     return (
         <>
-            <div className="flex flex-col md:flex-row justify-between items-center px-6 md:px-12 lg:px-20 py-3 bg-gray-200 gap-4 md:gap-0">
+            <div className="flex flex-col md:flex-row justify-between items-center px-6 md:px-12 lg:px-20 py-3 bg-[#FF5200] gap-4 md:gap-0 text-white">
 
                 <div>
                     <Link to="">

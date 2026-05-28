@@ -1,5 +1,6 @@
 import { instaItemsGrid } from "../Utils/Instamart";
 import { useRef } from "react";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 export default function InstaItems() {
   const scrollRef = useRef(null);
@@ -16,8 +17,8 @@ export default function InstaItems() {
       <div className="max-w-[80%] mx-auto relative">
         {/* Left */}
         <button onClick={() => scroll("left")}
-          className="absolute -left-5 top-1/2 -translate-y-1/2 z-10 bg-white border border-gray-300 shadow-lg rounded-full w-10 h-10 text-xl font-bold flex items-center justify-center hover:bg-gray-100">
-          &lt;
+          className="absolute -left-4 top-[45%] -translate-y-1/2 z-10 bg-[#0c1a30c2] border border-gray-300 shadow-lg rounded-full w-10 h-10 flex items-center justify-center hover:bg-orange-500 hover:border-orange-500 hover:text-white transition-all duration-200">
+          <FaChevronLeft className="text-white text-sm" />
         </button>
 
         <div ref={scrollRef} className="flex gap-8 overflow-x-auto scroll-smooth [&::-webkit-scrollbar]:hidden">
@@ -35,8 +36,8 @@ export default function InstaItems() {
 
         {/* Right */}
         <button onClick={() => scroll("right")}
-          className="absolute -right-5 top-1/2 -translate-y-1/2 z-10 bg-white border border-gray-300 shadow-lg rounded-full w-10 h-10 text-xl font-bold flex items-center justify-center hover:bg-gray-100">
-          &gt;
+          className="absolute -right-4 top-[45%] -translate-y-1/2 z-10 bg-[#0c1a30c2] border border-gray-300 shadow-lg rounded-full w-10 h-10 flex items-center justify-center  hover:bg-orange-500 hover:border-orange-500 hover:text-white transition-all duration-200">
+          <FaChevronRight className="text-white text-sm" />
         </button>
       </div>
     </>
