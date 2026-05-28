@@ -106,9 +106,9 @@ export default function RestaurantMenu() {
               <span className="flex items-center gap-1 px-3 py-1 rounded-full text-sm font-medium bg-green-600 text-white">
                 ★ {restInfo?.avgRatingString}
               </span>
-              <span className="text-gray-300">|</span>
-              <span className="text-sm text-gray-600">{restInfo?.totalRatingsString}</span>
-              <span className="text-gray-300">|</span>
+              <span className="text-gray-400 text-xs">•</span>
+                <span className="text-sm text-gray-600">{restInfo?.totalRatingsString}</span>
+                <span className="text-gray-400 text-xs">•</span>
               <span className="text-sm text-gray-600">
                 ₹{restInfo?.costForTwoMessage || restInfo?.costForTwo}
               </span>
@@ -142,77 +142,47 @@ export default function RestaurantMenu() {
         </Link>
 
         {/* ── Veg / Non-Veg ── */}
-        <div className="mb-8 flex flex-wrap gap-3">
+        <div className="mb-8 flex flex-wrap gap-2">
           <button
-            className={`text-lg w-30 text-green-800 border font-bold border-gray-400 rounded-lg py-1 mr-4 ${selected === "veg" ? "bg-green-600 text-white" : "bg-white"}`}
+            className={`text-sm px-3 py-1.5 w-auto border font-bold border-gray-400 rounded-lg transition-all ${selected === "veg" ? "bg-green-600 text-white" : "bg-white text-green-800"}`}
             onClick={() => setSelected(selected === "veg" ? null : "veg")}>
             Veg
           </button>
 
           <button
-            className={`text-lg w-30 text-[#c53131] border font-bold border-gray-400 rounded-lg py-1 ${selected === "nonveg" ? "bg-red-500 text-white" : "bg-white"}`}
+            className={`text-sm px-3 py-1.5 w-auto border font-bold border-gray-400 rounded-lg transition-all ${selected === "nonveg" ? "bg-red-500 text-white" : "bg-white text-[#c53131]"}`}
             onClick={() => setSelected(selected === "nonveg" ? null : "nonveg")}>
             Non Veg
           </button>
 
-          {/* Sort */}
-                    
           <button
-              className={`text-sm sm:text-base px-5 py-2 border font-bold rounded-xl transition-all duration-200
-              ${
-                sortBy === "priceLowToHigh"
-                  ? "bg-orange-500 text-white border-orange-500"
-                  : "bg-white text-orange-600 border-gray-300"
-              }`}
-              onClick={() =>
-                setSortBy(sortBy === "priceLowToHigh" ? null : "priceLowToHigh")
-              }
-            >
+            className={`text-sm px-3 py-1.5 border font-bold rounded-xl transition-all duration-200 ${sortBy === "priceLowToHigh" ? "bg-orange-500 text-white border-orange-500" : "bg-white text-orange-600 border-gray-300"}`}
+            onClick={() => setSortBy(sortBy === "priceLowToHigh" ? null : "priceLowToHigh")}>
             Cost: Low to High
-            </button>
+          </button>
 
-            <button
-              className={`text-sm sm:text-base px-5 py-2 border font-bold rounded-xl transition-all duration-200
-              ${
-                sortBy === "priceHighToLow"
-                  ? "bg-orange-500 text-white border-orange-500"
-                  : "bg-white text-orange-600 border-gray-300"
-              }`}
-              onClick={() =>
-                setSortBy(sortBy === "priceHighToLow" ? null : "priceHighToLow")
-              }
-            >
+          <button
+            className={`text-sm px-3 py-1.5 border font-bold rounded-xl transition-all duration-200 ${sortBy === "priceHighToLow" ? "bg-orange-500 text-white border-orange-500" : "bg-white text-orange-600 border-gray-300"}`}
+            onClick={() => setSortBy(sortBy === "priceHighToLow" ? null : "priceHighToLow")}>
             Cost: High to Low
-            </button>
+          </button>
 
+          <button
+            className={`text-sm px-3 py-1.5 border font-bold rounded-xl transition-all duration-200 ${sortBy === "rating" ? "bg-yellow-500 text-white border-yellow-500" : "bg-white text-yellow-600 border-gray-300"}`}
+            onClick={() => setSortBy(sortBy === "rating" ? null : "rating")}>
+            Top Rated
+          </button>
+
+          {(sortBy || selected) && (
             <button
-              className={`text-sm sm:text-base px-5 py-2 border font-bold rounded-xl transition-all duration-200
-              ${
-                sortBy === "rating"
-                  ? "bg-yellow-500 text-white border-yellow-500"
-                  : "bg-white text-yellow-600 border-gray-300"
-              }`}
-              onClick={() =>
-                setSortBy(sortBy === "rating" ? null : "rating")
-              }
-            >
-              Top Rated
+              className="text-sm px-3 py-1.5 border font-bold rounded-xl bg-gray-100 text-gray-600 border-gray-300 hover:bg-gray-200 transition-all duration-200"
+              onClick={() => { setSortBy(null); setSelected(null); }}>
+              Clear
             </button>
-
-            {(sortBy || selected) && (
-              <button
-                className="text-sm sm:text-base px-5 py-2 border font-bold rounded-xl bg-gray-100 text-gray-600 border-gray-300 hover:bg-gray-200 transition-all duration-200"
-                onClick={() => {
-                  setSortBy(null);
-                  setSelected(null);
-                }}
-              >
-                Clear
-              </button>
-            )}
+          )}
         </div>
-    </div>
-      
+      </div>
+              
 
       {/*  Menu  */}
     <div className="w-[80%] mx-auto">
