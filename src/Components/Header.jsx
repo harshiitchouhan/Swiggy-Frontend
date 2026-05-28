@@ -10,24 +10,52 @@ function Header() {
     <header className="bg-[#ff5200] font-serif">
 
       {/* First Div - Navbar */}
-      <div className="font-semibold text-white flex flex-col md:flex-row justify-between items-center px-6 md:px-20 py-6 md:py-8 gap-4 md:gap-0">
-        <img
-          className="h-11 w-36"
-          src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/static-assets/images/swiggy_logo_white.png"
-          alt="Swiggy Image"
-        />
+<div className="font-semibold text-white px-4 sm:px-6 md:px-12 lg:px-20 py-5 md:py-7">
+  
+  <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
+    
+    {/* Logo */}
+    <img
+      className="h-10 sm:h-11 w-auto"
+      src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/static-assets/images/swiggy_logo_white.png"
+      alt="Swiggy Logo"
+    />
 
-        <div className="flex flex-col md:flex-row gap-4 md:gap-12 items-center">
-          <Link to="/corporate">Swiggy Corporate</Link>
-          <Link to="/partner">Partner with us</Link>
-          <a className="border border-white rounded-lg py-2 px-4"target="_blank">
-            Get the App
-          </a>
-          <a className="rounded-2xl bg-black py-2 px-4"target="_blank">
-            Sign in
-          </a>
-        </div>
-      </div>
+    {/* Nav Links */}
+    <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-5 md:gap-8 text-sm sm:text-base">
+      
+      <Link
+        to="/corporate"
+        className="hover:text-orange-400 transition"
+      >
+        Swiggy Corporate
+      </Link>
+
+      <Link
+        to="/partner"
+        className="hover:text-orange-400 transition"
+      >
+        Partner with us
+      </Link>
+
+      <a
+        target="_blank"
+        rel="noreferrer"
+        className="border border-white hover:bg-white hover:text-black transition rounded-xl py-2 px-4"
+      >
+        Get the App
+      </a>
+
+      <a
+        target="_blank"
+        rel="noreferrer"
+        className="rounded-xl bg-black hover:bg-neutral-900 transition py-2 px-5"
+      >
+        Sign in
+      </a>
+    </div>
+  </div>
+</div>
 
       {/* Second Div - Hero Section */}
       <div className="relative pt-12 md:pt-16 pb-8">
