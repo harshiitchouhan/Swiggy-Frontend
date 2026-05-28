@@ -10,95 +10,95 @@ function Header() {
     <header className="bg-[#ff5200] font-serif">
 
       {/* First Div - Navbar */}
-<div className="font-semibold text-white px-4 sm:px-6 md:px-12 lg:px-20 py-5 md:py-7">
+      <div className="font-semibold text-white px-4 sm:px-6 md:px-12 lg:px-20 py-5 md:py-7">
 
-  {/* Mobile Layout */}
-  <div className="flex md:hidden items-center justify-between mb-5">
+        {/* Mobile Layout */}
+        <div className="flex md:hidden items-center justify-between mb-5">
 
-    <img
-      className="h-10 w-auto"
-      src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/static-assets/images/swiggy_logo_white.png"
-      alt="Swiggy Logo"
-    />
+          <img
+            className="h-10 w-auto"
+            src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/static-assets/images/swiggy_logo_white.png"
+            alt="Swiggy Logo"
+          />
 
-    <a
-      target="_blank"
-      rel="noreferrer"
-      className="rounded-xl bg-black hover:bg-neutral-900 transition py-2 px-4 text-sm"
-    >
-      Sign in
-    </a>
-  </div>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-xl bg-black hover:bg-neutral-900 transition py-2 px-4 text-sm"
+          >
+            Sign in
+          </a>
+        </div>
 
-  {/* Desktop Layout */}
-  <div className="hidden md:flex items-center justify-between">
+        {/* Desktop Layout */}
+        <div className="hidden md:flex items-center justify-between">
 
-    <img
-      className="h-11 w-auto"
-      src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/static-assets/images/swiggy_logo_white.png"
-      alt="Swiggy Logo"
-    />
+          <img
+            className="h-11 w-auto"
+            src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/static-assets/images/swiggy_logo_white.png"
+            alt="Swiggy Logo"
+          />
 
-    <div className="flex items-center gap-10">
+          <div className="flex items-center gap-10">
 
-      <Link
-        to="/corporate"
-        className="hover:text-orange-400 transition"
-      >
-        Swiggy Corporate
-      </Link>
+            <Link
+              to="/corporate"
+              className="hover:text-orange-400 transition"
+            >
+              Swiggy Corporate
+            </Link>
 
-      <Link
-        to="/partner"
-        className="hover:text-orange-400 transition"
-      >
-        Partner with us
-      </Link>
+            <Link
+              to="/partner"
+              className="hover:text-orange-400 transition"
+            >
+              Partner with us
+            </Link>
 
-      <a
-        target="_blank"
-        rel="noreferrer"
-        className="border border-white hover:bg-white hover:text-black transition rounded-xl py-2 px-4"
-      >
-        Get the App
-      </a>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              className="border border-white hover:bg-white hover:text-black transition rounded-xl py-2 px-4"
+            >
+              Get the App
+            </a>
 
-      <a
-        target="_blank"
-        rel="noreferrer"
-        className="rounded-xl bg-black hover:bg-neutral-900 transition py-2 px-5"
-      >
-        Sign in
-      </a>
-    </div>
-  </div>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-xl bg-black hover:bg-neutral-900 transition py-2 px-5"
+            >
+              Sign in
+            </a>
+          </div>
+        </div>
 
-  {/* Mobile Bottom Links */}
-  <div className="flex md:hidden flex-wrap justify-center items-center gap-4 text-sm">
+        {/* Mobile Bottom Links */}
+        <div className="flex md:hidden flex-wrap justify-center items-center gap-4 text-sm">
 
-    <Link
-      to="/corporate"
-      className="hover:text-orange-400 transition"
-    >
-      Swiggy Corporate
-    </Link>
+          <Link
+            to="/corporate"
+            className="hover:text-orange-400 transition"
+          >
+            Swiggy Corporate
+          </Link>
 
-    <Link
-      to="/partner"
-      className="hover:text-orange-400 transition"
-    >
-      Partner with us
-    </Link>
+          <Link
+            to="/partner"
+            className="hover:text-orange-400 transition"
+          >
+            Partner with us
+          </Link>
 
-    <a
-      target="_blank"
-      rel="noreferrer"
-      className="border border-white hover:bg-white hover:text-black transition rounded-xl py-2 px-4"
-    >
-      Get the App
-    </a>
-  </div>
-</div>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            className="border border-white hover:bg-white hover:text-black transition rounded-xl py-2 px-4"
+          >
+            Get the App
+          </a>
+        </div>
+      </div>
 
       {/* Second Div - Hero Section */}
       <div className="relative pt-12 md:pt-16 pb-8">
