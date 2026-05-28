@@ -4,8 +4,7 @@ export default function RestCard({swiggydata}){
 return(
 
      <Link to={"/city/delhi/" + swiggydata?.info?.id}>
-     <div className="w-70 transform transition duration-250 hover:scale-90">
-     <div className="relative">
+     <div className="w-full transform transition duration-250 hover:scale-90">     <div className="relative">
      <img className="w-full h-45 object-cover rounded-2xl  " src={"https://media-assets.swiggy.com/swiggy/image/upload/" + swiggydata?.info?.cloudinaryImageId} alt="RestImage" />
 
           <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent rounded-2xl">
