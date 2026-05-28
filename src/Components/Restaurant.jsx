@@ -9,7 +9,7 @@ export default function Restaurant() {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await fetch("http://localhost:4000/api/restaurants");
+      const response = await fetch("https://swiggy-swart-zeta.vercel.app/api/restaurants");
       const data = await response.json();
 
       const titleCard = data?.data?.cards?.find(

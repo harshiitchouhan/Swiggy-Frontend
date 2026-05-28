@@ -13,7 +13,7 @@ export default function RestaurantMenu() {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await fetch(`http://localhost:4000/api/menu/${id}`);
+      const response = await fetch(`https://swiggy-swart-zeta.vercel.app/api/menu/${id}`);
       const data = await response.json();
 
       const info = data?.data?.cards?.[2]?.card?.card?.info;
