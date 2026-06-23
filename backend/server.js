@@ -3,7 +3,7 @@ const cors = require("cors");
 
 const app = express();
 
-app.use(cors({ origin: ["http://localhost:5173", "https://swiggy-eat.vercel.app/"], credentials: true }));
+app.use(cors({ origin: ["http://localhost:5173", "https://swiggy-eat.vercel.app"], credentials: true }));
 app.use(express.json());
 
 const LAT = "28.7069867";
