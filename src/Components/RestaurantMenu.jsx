@@ -5,6 +5,7 @@ import RestaurantMenuShimmer from "./RestaurantMenuShimmer"
 import { Link ,useNavigate} from "react-router";
 
 export default function RestaurantMenu() {
+  // id of restaurant
   let { id } = useParams();
 
   const [menuData, setMenuData] = useState([]);
